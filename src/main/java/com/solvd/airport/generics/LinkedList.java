@@ -2,7 +2,7 @@ package com.solvd.airport.generics;
 
 import java.util.NoSuchElementException;
 
-public class LinkedList<T extends Comparable> {
+public class LinkedList<T extends Comparable<T>> {
     private MyNode<T> front;
     private int amount;
 

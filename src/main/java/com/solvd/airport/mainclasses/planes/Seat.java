@@ -6,11 +6,11 @@ import com.solvd.airport.enums.Type;
 public class Seat {
     private int row;
     private Enum<SeatLetter> letter;
-	private Type type;
+    private Type type;
 
     public Seat(int row, Enum<SeatLetter> letter, Type type) {
-    	this.row = row;
-    	this.type = type;
+        this.row = row;
+        this.type = type;
     }
 
     public int getRow() {
@@ -27,9 +27,8 @@ public class Seat {
                 "Letter: " + getLetter();
     }
 
-	public Enum<Type> getType(Type type) {
-		// TODO Auto-generated method stub
-		return this.type;
-	}
+    public Enum<Type> getType(Type type) {
+        return this.type;
+    }
 
 }

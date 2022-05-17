@@ -1,6 +1,6 @@
 package com.solvd.airport.generics;
 
-public class MyNode<E extends Comparable> {
+public class MyNode<E extends Comparable<E>> {
 
     private E info;
     private MyNode<E> next;

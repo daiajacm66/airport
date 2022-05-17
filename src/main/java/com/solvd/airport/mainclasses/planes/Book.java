@@ -58,5 +58,8 @@ public abstract class Book implements iBook {
     public HashSet<Flight> getFlightList() {
         return flightList;
     }
-    
+
+    public void iCheckIn(Passenger passenger) {
+    }
+
 }

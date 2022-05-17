@@ -1,28 +1,26 @@
 package com.solvd.airport.mainclasses.users;
 
 import java.text.DateFormat;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
-
 import com.solvd.airport.enums.GenderType;
 
-
 public class Passenger extends Person {
-    private long code;
-    private String email;
-    private boolean ischeckInFlight;
-    // ArrayList<Flight> aprobbedFlights = new ArrayList<>();
-    
-    public Passenger() {}
-    public Passenger(String surname, String name, long dni, String phoneNumber, String email,
-            long code, String passport, Enum<GenderType> gender, DateFormat dateOfBirth, int age) {
-        super(surname, name, passport, dni, gender, phoneNumber, dateOfBirth, age);
-        this.email = email;
-        this.code = code;
-        this.ischeckInFlight = false;
-    }
+	private long code;
+	private String email;
+	private boolean ischeckInFlight;
+	// ArrayList<Flight> aprobbedFlights = new ArrayList<>();
 
-    public boolean isIscheckInFlight() {
+	public Passenger() {
+	}
+
+	public Passenger(String surname, String name, long dni, String phoneNumber, String email,
+			long code, String passport, Enum<GenderType> gender, DateFormat dateOfBirth, int age) {
+		super(surname, name, passport, dni, gender, phoneNumber, dateOfBirth, age);
+		this.email = email;
+		this.code = code;
+		this.ischeckInFlight = false;
+	}
+
+	public boolean isIscheckInFlight() {
 		return ischeckInFlight;
 	}
 
@@ -71,41 +69,42 @@ public class Passenger extends Person {
 
 	public String getEmail() {
 
-        return this.email;
-    }
+		return this.email;
+	}
 
-    public void setmail(String email) {
+	public void setmail(String email) {
 
-        this.email = email;
-    }
+		this.email = email;
+	}
 
-    public long getCode() {
-        return this.code;
-    }
+	public long getCode() {
+		return this.code;
+	}
 
-    public void sayHello(String surname, String name) {
-        System.out.println("Hello, my name is " + surname + name + ".");
-    }
+	public void sayHello(String surname, String name) {
+		System.out.println("Hello, my name is " + surname + name + ".");
+	}
 
-    public boolean isCheckedInFlight() {
-        return ischeckInFlight;
-    }
+	public boolean isCheckedInFlight() {
+		return ischeckInFlight;
+	}
 
-    public void setCheckedInFlight(boolean checkInFlight) {
-        ischeckInFlight = checkInFlight;
-    }
-    
-    public static int getAge() {
-        return this.getAge();
-    }
-    @Override
-    public String toString() {
-    	return "\\tSurname: " + super.getSurname()
-    	+ "\tName: " + super.getName() + "\tDNI: " + super.dni()
-    	+ "\tPassport: " + super.getPassport() 
-    	+ "\tPhone Number: " + super.getPhoneNumber() 
-    	+ "\tE-mail: " + this.email
-    	+ "\tDate of birth: " + super.getDateOfBirth();
-    }
+	public void setCheckedInFlight(boolean checkInFlight) {
+		ischeckInFlight = checkInFlight;
+	}
+
+	public int getAge() {
+		return getAge();
+	}
+
+	@Override
+	public String toString() {
+		return "\\tSurname: " + super.getSurname()
+				+ "\tName: " + super.getName() + "\tDNI: " + super.dni()
+				+ "\tPassport: " + super.getPassport()
+				+ "\tPhone Number: " + super.getPhoneNumber()
+				+ "\tE-mail: " + this.email
+				+ "\tDate of birth: " + super.getDateOfBirth();
+	}
 
 }

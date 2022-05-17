@@ -2,74 +2,74 @@ package com.solvd.airport.mainclasses.planes;
 
 import java.util.List;
 import java.util.Objects;
-import java.util.logging.Logger;
-
 import com.solvd.airport.Main;
 import com.solvd.airport.enums.AirlineNames;
 
+import org.apache.logging.log4j.core.Logger;
 
 @SuppressWarnings("hiding")
 public class Plane<Seat> {
 	private static Logger LOGGER = Logger.getLogger(Main.class);
 	private int identifier;
-    private String idname;
-    private int passengerNumber;
-    private Enum<AirlineNames> company;
-    private List<Seat> seats;
-    
-    public Plane(String idname, int capacity, Enum<AirlineNames> company, List<Seat> seats) {
-        this.passengerNumber = capacity;
-    	this.idname = idname;
-    	this.company = company;
-    	this.seats = seats;
-    }
-    public Plane(int identifier, String idname, int capacity, Enum<AirlineNames> company) {
-        this.identifier = identifier;
-    	this.idname = idname;
-        this.passengerNumber = capacity;
-        this.company = company;
-    }
-    
-    public int getIdentifier() {
-    	return this.identifier;
-    }
-    
-    public void setIdentifier(int id) {
-    	this.identifier = id;
-    }
+	private String idname;
+	private int passengerNumber;
+	private Enum<AirlineNames> company;
+	private List<Seat> seats;
 
-    public void setName(String idname) {
-        this.idname = idname;
-    }
+	public Plane(String idname, int capacity, Enum<AirlineNames> company, List<Seat> seats) {
+		this.passengerNumber = capacity;
+		this.idname = idname;
+		this.company = company;
+		this.seats = seats;
+	}
 
-    public String getName() {
-        return this.idname;
-    }
+	public Plane(int identifier, String idname, int capacity, Enum<AirlineNames> company) {
+		this.identifier = identifier;
+		this.idname = idname;
+		this.passengerNumber = capacity;
+		this.company = company;
+	}
 
-    public int getCapacity() {
-        return this.passengerNumber;
-    }
+	public int getIdentifier() {
+		return this.identifier;
+	}
 
-    public void setCapacity(Integer capacity) {
-        this.passengerNumber = 350;
-    }
+	public void setIdentifier(int id) {
+		this.identifier = id;
+	}
 
-    public ClassType getClassID() {
-        return this.getClassID();
-    }
-    
-    public List<Seat> getSeats() {
-        return seats;
-    }
+	public void setName(String idname) {
+		this.idname = idname;
+	}
 
-    public void setSeats(List<Seat> seats) {
-        this.seats = seats;
-    }
-    
-    public void printData() {
-        String a = toString();
-        LOGGER.info(a);
-    }
+	public String getName() {
+		return this.idname;
+	}
+
+	public int getCapacity() {
+		return this.passengerNumber;
+	}
+
+	public void setCapacity(Integer capacity) {
+		this.passengerNumber = 350;
+	}
+
+	public ClassType getClassID() {
+		return this.getClassID();
+	}
+
+	public List<Seat> getSeats() {
+		return seats;
+	}
+
+	public void setSeats(List<Seat> seats) {
+		this.seats = seats;
+	}
+
+	public void printData() {
+		String a = toString();
+		LOGGER.info(a);
+	}
 
 	@Override
 	public int hashCode() {
